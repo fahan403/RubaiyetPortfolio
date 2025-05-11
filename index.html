@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rubaiyet Ann-Nur | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+      color: #333;
+    }
+    header {
+      background: #102a43;
+      color: #fff;
+      padding: 4rem 1rem;
+      text-align: center;
+      animation: fadeInDown 1.5s ease-in-out;
+    }
+    header h1 {
+      font-size: 3rem;
+      animation: typing 3s steps(40, end), blink .75s step-end infinite;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: .15em solid orange;
+      display: inline-block;
+    }
+    header p {
+      margin-top: 1rem;
+      font-size: 1.3rem;
+      opacity: 0.85;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+      background: #243b53;
+      padding: 1rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      transform: scale(1.1);
+      color: #ffd166;
+    }
+    section {
+      padding: 2.5rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    h2 {
+      color: #102a43;
+      margin-bottom: 1rem;
+      font-size: 2.2rem;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 60px;
+      height: 3px;
+      background: #ff7e67;
+    }
+    ul, p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+    .download {
+      text-align: center;
+      margin-top: 3rem;
+      animation: zoomIn 1s ease-in-out;
+    }
+    .download a {
+      background: #ff7e67;
+      color: #fff;
+      padding: 1rem 2.5rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: background 0.3s ease;
+    }
+    .download a:hover {
+      background: #f76752;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #102a43;
+      color: #fff;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      nav {
+        flex-direction: column;
+      }
+      section {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rubaiyet Ann-Nur</h1>
+    <p>Aspiring Accountant | BBA in Accounting | Team Player | Quick Learner</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#activities">Activities</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>A dedicated and fast-learning student with strong problem-solving and teamwork skills. Eager to apply academic knowledge in the field of Accounting and contribute meaningfully to an organization.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>BBA in Accounting</strong>, Eastern University (2021–2025), CGPA: 3.80</li>
+      <li><strong>HSC</strong>, Savar Model College (2018), GPA: 3.58</li>
+      <li><strong>SSC</strong>, Saint Joseph’s High School (2017), GPA: 4.00</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Core Competencies</h2>
+    <ul>
+      <li>Public Speaking</li>
+      <li>Organizing & Management</li>
+      <li>Team Player</li>
+      <li>Quick Learner</li>
+    </ul>
+    <h2>IT Skills</h2>
+    <ul>
+      <li>Email Management</li>
+      <li>MS Word, Excel, PowerPoint</li>
+    </ul>
+    <h2>Languages</h2>
+    <ul>
+      <li>Bangla (Native)</li>
+      <li>English (Working Knowledge)</li>
+      <li>Hindi</li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Experience & Achievements</h2>
+    <ul>
+      <li>Accounting Intern, United Commercial Bank PLC (Feb–Apr 2025)</li>
+      <li>Admission Ambassador, Eastern University (Nov 2021–Jan 2025)</li>
+      <li>Event Manager, Eastern Business Challenge Season 3 (2022)</li>
+      <li>Volunteer, Battle of Traders Season 3 (2022)</li>
+    </ul>
+  </section>
+
+  <section id="activities">
+    <h2>Extracurricular Activities</h2>
+    <ul>
+      <li>General Member, Prothom Alo Bondhusova (2022–2024)</li>
+      <li>Decoration Associate, Business & Social Entrepreneurship Club (2022)</li>
+      <li>General Member, Cultural Club (2023–2024)</li>
+      <li>Workshops on Digital Marketing, Entrepreneurship, Corporate Skills, and Study Abroad</li>
+      <li>Industry Visits: ACI Limited, Lovely Sweater</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:rubaiyeta@gmail.com">rubaiyeta@gmail.com</a></p>
+    <p>Phone: +8801972807641</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/rubaiyet-annur-a90559352/" target="_blank">Rubaiyet Ann-Nur</a></p>
+    <p>Facebook: <a href="https://www.facebook.com/Rubaiyet.Annur" target="_blank">Rubaiyet Annur</a></p>
+  </section>
+
+  <section class="download">
+    <a href="c:\Users\Viper\Downloads\Annur.docx" download>Download My CV</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rubaiyet Ann-Nur. All rights reserved.</p>
+  </footer>
+</body>
+</html>
