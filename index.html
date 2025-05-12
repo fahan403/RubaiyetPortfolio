@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rubaiyet Ann-Nur | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <style>
     * {
       margin: 0;
@@ -16,28 +17,29 @@
       scroll-behavior: smooth;
     }
     body {
-      background: linear-gradient(to right, #f0f4f8, #d9e2ec);
-      color: #333;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #e0e0e0;
+      overflow-x: hidden;
     }
     header {
-      background: #102a43;
+      background: rgba(16, 42, 67, 0.9);
       color: #fff;
       padding: 4rem 1rem;
       text-align: center;
-      animation: fadeInDown 1.5s ease-in-out;
+      backdrop-filter: blur(8px);
     }
     header h1 {
       font-size: 3rem;
-      animation: typing 3s steps(40, end), blink .75s step-end infinite;
       white-space: nowrap;
       overflow: hidden;
-      border-right: .15em solid orange;
+      border-right: .15em solid #ff7e67;
+      animation: typing 4s steps(40, end), blink .75s step-end infinite;
       display: inline-block;
     }
     header p {
       margin-top: 1rem;
       font-size: 1.3rem;
-      opacity: 0.85;
+      opacity: 0.9;
     }
     nav {
       display: flex;
@@ -46,6 +48,9 @@
       gap: 1.2rem;
       background: #243b53;
       padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav a {
       color: #fff;
@@ -58,13 +63,12 @@
       color: #ffd166;
     }
     section {
-      padding: 2.5rem 1rem;
+      padding: 3rem 1rem;
       max-width: 1000px;
       margin: auto;
-      animation: fadeInUp 1s ease-in-out;
     }
     h2 {
-      color: #102a43;
+      color: #ffd166;
       margin-bottom: 1rem;
       font-size: 2.2rem;
       position: relative;
@@ -82,23 +86,26 @@
       margin-bottom: 1rem;
       line-height: 1.8;
     }
+    a {
+      color: #ffb703;
+    }
     .download {
       text-align: center;
       margin-top: 3rem;
-      animation: zoomIn 1s ease-in-out;
     }
     .download a {
       background: #ff7e67;
       color: #fff;
       padding: 1rem 2.5rem;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 12px;
       font-size: 1.1rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      transition: background 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: background 0.3s ease, transform 0.2s;
     }
     .download a:hover {
       background: #f76752;
+      transform: translateY(-2px);
     }
     footer {
       text-align: center;
@@ -106,24 +113,12 @@
       background: #102a43;
       color: #fff;
     }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
     @keyframes typing {
       from { width: 0 }
       to { width: 100% }
     }
     @keyframes blink {
       50% { border-color: transparent }
-    }
-    @keyframes zoomIn {
-      from { transform: scale(0.8); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
     }
     @media (max-width: 768px) {
       header h1 {
@@ -136,9 +131,19 @@
         padding: 1rem;
       }
     }
+    /* Background particles */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
   </style>
 </head>
 <body>
+  <div id="particles-js"></div>
   <header>
     <h1>Rubaiyet Ann-Nur</h1>
     <p>Aspiring Accountant | BBA in Accounting | Team Player | Quick Learner</p>
@@ -153,12 +158,12 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about">
+  <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
     <p>A dedicated and fast-learning student with strong problem-solving and teamwork skills. Eager to apply academic knowledge in the field of Accounting and contribute meaningfully to an organization.</p>
   </section>
 
-  <section id="education">
+  <section id="education" data-aos="fade-right">
     <h2>Education</h2>
     <ul>
       <li><strong>BBA in Accounting</strong>, Eastern University (2021–2025), CGPA: 3.80</li>
@@ -167,7 +172,7 @@
     </ul>
   </section>
 
-  <section id="skills">
+  <section id="skills" data-aos="fade-left">
     <h2>Core Competencies</h2>
     <ul>
       <li>Public Speaking</li>
@@ -188,7 +193,7 @@
     </ul>
   </section>
 
-  <section id="experience">
+  <section id="experience" data-aos="zoom-in">
     <h2>Experience & Achievements</h2>
     <ul>
       <li>Accounting Intern, United Commercial Bank PLC (Feb–Apr 2025)</li>
@@ -198,7 +203,7 @@
     </ul>
   </section>
 
-  <section id="activities">
+  <section id="activities" data-aos="fade-up">
     <h2>Extracurricular Activities</h2>
     <ul>
       <li>General Member, Prothom Alo Bondhusova (2022–2024)</li>
@@ -209,7 +214,7 @@
     </ul>
   </section>
 
-  <section id="contact">
+  <section id="contact" data-aos="fade-up">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:rubaiyeta@gmail.com">rubaiyeta@gmail.com</a></p>
     <p>Phone: +8801972807641</p>
@@ -217,12 +222,24 @@
     <p>Facebook: <a href="https://www.facebook.com/Rubaiyet.Annur" target="_blank">Rubaiyet Annur</a></p>
   </section>
 
-  <section class="download">
+  <section class="download" data-aos="zoom-in">
     <a href="c:\Users\Viper\Downloads\Annur.docx" download>Download My CV</a>
   </section>
 
   <footer>
     <p>&copy; 2025 Rubaiyet Ann-Nur. All rights reserved.</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script>
+    particlesJS.load('particles-js', 'https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/demo/particles.json');
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 1000
+    });
+  </script>
 </body>
 </html>
